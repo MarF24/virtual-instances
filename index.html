@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/clases.js"></script>
+    <script src="js/functions.js"></script>
+    <title>Document</title>    
+</head>
+<body>
+    <div id="divPrincipal">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="inputUsuario" placeholder="Ingrese usuario"><br>
+            <input type="password" id="inputPass" placeholder="Ingrese contraseña"><br>
+            <input type="button" value="Ingresar" id="btnLogin">
+        </form>
+        <br>
+        <hr>
+        <h2>Registro</h2>
+        <label for="rForm">Complete los datos:</label>
+        <form  id="rForm">
+            <input type="text" id="rNombre" placeholder="Nombre"><br>
+            <input type="text" id="rApellido" placeholder="Apellido"><br>
+            <input type="text" id="rUser" placeholder="Nombre usuario"><br>
+            <input type="password" id="rPass" placeholder="Contraseña"><br>
+            <input type="text" id="rTarjeta" placeholder="Ingrese tarjeta"><br>
+            <input type="number" id="rCVC" placeholder="CVC"><br>
+            <input type="button" value="Registrar" id="rBtn">
+        </form>
+        <p>Nombre de usuario: alfanumérico, case insensitive. <br>
+        Contraseña: mínimo de 5 caracteres, contando con al menos una mayúscula, una minúscula y un número. <br>
+        Tarjeta de crédito: formato xxxx-xxxx-xxxx-xxxx.<br>
+        CVC: formato numérico de 3 dígitos</p>
+        <br>
+        <hr>
+    </div>
+    <div id="divUsuario">
+        <h3>Usuario logueado!</h3>
+        <h5 id="nombreUserLog">Nombre - Apellido</h5>
+        <input type="button" id="userLogout" value="Salir">
+        <br>
+        <br>
+        <h5>--Alquilar una instancia/maquina--</h5>
+        <select id="comboMaquinas">
+            
+        </select>
+        <input type="button" value="Alquilar" id="btnAlquilar">
+        <br>
+        <hr>
+        <h5>--Filtras instancias por estado--</h5>
+        <input type="radio" id="radioEncendidas" class="radioBtns" name="radioBtnInstancias" value="Encendidas">
+        <label for="radioEncendidas">Encendidas</label><br>
+        <input type="radio" id="radioApagadas" name="radioBtnInstancias" class="radioBtns" value="Apagadas">
+        <label for="radioApagadas">Apagadas</label><br>
+        <input type="radio" id="radioTodas" name="radioBtnInstancias" value="Todas" checked>
+        <label for="radioTodas">Todas</label><br>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Instancia</th>
+                    <th>Estado</th>
+                    <th>Veces iniciada</th>
+                    <th>Prender/Apagar</th>
+                </tr>
+            </thead>
+            <tbody id="tablaInstanciasAlquiladas">
+               
+            </tbody>
+        </table>
+        <h5>--Resumen costos de maquinas/instancias adquiridas--</h5>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Tipo de instancia</th>
+                    <th>Costo por encendido</th>
+                    <th>Total veces iniciada</th>
+                    <th>Costo total</th>
+                </tr>
+            </thead>
+            <tbody id="tablaInstanciasCosto">
+               
+            </tbody>
+        </table>
+        <br>
+        <hr>
+    </div>
+    <div id="divAdmin">
+        <h3>Admin logueado!</h3>
+        <input type="button" id="adminLogout" value="Salir">        
+        <h5>Tabla de usuarios</h5>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Nombre-Apellido</th>
+                    <th>Usuario</th>
+                    <th>contrasenia</th>
+                    <th>ID</th>
+                    <th>Estado</th>
+                    <th>Activar/Bloquear</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+               
+            </tbody>
+        </table>
+        <br>
+        <hr>
+        <h5>Modificar stock de maquinas</h5>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Instancia</th>
+                    <th>Stock actual</th>
+                </tr>
+            </thead>
+            <tbody id="tablaStock">
+               
+            </tbody>
+        </table>
+        <h5>Seleccionar maquina / instancia</h5>
+        <select id="comboStock">
+            
+
+        </select>
+        <label for="inputStock">Ingrese nuevo stock</label>
+        <input type="number" id="inputStock">
+        <input type="button" id="btnModificarStock" value="Modificar">
+        <br>
+        <hr>
+
+        <h5>informe de máquinas virtuales</h5>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Instancia</th>
+                    <th>Alquiladas</th>
+                    <th>Ingresos</th>
+                </tr>
+            </thead>
+            <tbody id="tablaInformeMaquinas">
+               
+            </tbody>
+        </table>
+        <p id="ingresosTotales" ></p>
+    </div>
+    
+    
+</body>
+</html>
